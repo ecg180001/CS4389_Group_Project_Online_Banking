@@ -3,8 +3,8 @@ Welcome to our group project, where we are building a secure application for onl
 
 > Note: This application is still a work in progress. Currently, we are finalizing our documentation and plans for API routes, page routes, components, security, database, and architecture. Once we finalize the plans, we will start working on the features in separate branches and merge to main as they are completed.
 
-> Link to deliverable document:
-> Link to agile board
+> Link to deliverable document: https://cometmail-my.sharepoint.com/:w:/g/personal/ecg180001_utdallas_edu/EcXMdtwLBs9MtClCaZPkv4UBMBHqMr_el7XUS5ESLKCX5w?e=rsInyp
+> Link to agile board: https://cometmail-my.sharepoint.com/:x:/g/personal/efa190000_utdallas_edu/EW81MXs-JsdEo4--FuF0ERUBjYRixZYYUVueCQhVSXqkfw?e=SkAWwO
 
 ## Getting Started
 
