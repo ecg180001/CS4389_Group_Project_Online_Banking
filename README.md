@@ -1,7 +1,10 @@
 # Online Banking
 Welcome to our group project, where we are building a secure application for online banking. This application allows users to login, securely make transactions, view account details, and more.
 
-> Note: This application is still a work in progress. Currently, we are finalizing our documentation and plans for API routes, page routes, components, security, database, and architecture. Once we finalize the plans, we will start working on the features in separate branches and merge to main as they are completed.  
+> Note: This application is still a work in progress. Currently, we are finalizing our documentation and plans for API routes, page routes, components, security, database, and architecture. Once we finalize the plans, we will start working on the features in separate branches and merge to main as they are completed.
+
+> Link to deliverable document:
+> Link to agile board
 
 ## Getting Started
 
