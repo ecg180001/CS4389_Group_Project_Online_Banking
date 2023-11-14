@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.logotext {
+  background: #cfe7fa;
+  background: linear-gradient(to right, #cfe7fa 0%, #6393c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Playfair Display", serif;
+}
+.auth-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.auth-bg-img img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.auth-bg-img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.login {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 600px;
+  max-height: 390px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-auth p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #667085;
+  margin-top: 4px;
+}
+
+.title-auth {
+  text-align: center;
+}
+
+.title-auth h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #101828;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.login .form-group input.form-text {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  margin-bottom: 16px;
+  height: 48px;
+}
+
+.login input.btn {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 16px;
+  display: inline-block;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+
+  background-color: #e2337f;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 2vw;
+}
+
+.login input.btn:hover {
+  color: #fcfbfb;
+  background: #4ee4ff;
+}
+
+.logo-col {
+  max-width: 356px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.logo-col img.auth-logo {
+  width: 100%;
+  height: 99px;
+}
+
+/* Otp css */
+.otp-form .otp-field {
+  display: inline-block;
+  width: 3.6rem;
+  height: 3.6rem;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  border-radius: 10px;
+  margin: 0 6px;
+}
+
+form.otp-form {
+  margin: 24px 0;
+}
+
+.otp-form .otp-field:focus {
+  border-color: #101010;
+}
+
+.auth-footer {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ededed;
+}
+
+.auth-footer p {
+  padding-top: 16px;
+  color: #019d9a;
+}
+
+.auth-footer .resend-btn {
+  cursor: pointer;
+  color: #329d9a;
+}
+
+form.otp-form {
+  margin: 24px 0 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 540px) {
+  form.otp-form {
+    transform: scale(0.5);
+    flex-wrap: unset;
+    width: 100%;
+  }
+}
