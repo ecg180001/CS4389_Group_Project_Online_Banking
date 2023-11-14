@@ -1,0 +1,22 @@
+{
+  "name": "cs4389_group_project_online_banking",
+  "version": "1.0.0",
+  "description": "Online banking simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecg180001/CS4389_Group_Project_Online_Banking.git"
+  },
+  "author": "Emmanuel Giah, Sixri, Manny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecg180001/CS4389_Group_Project_Online_Banking/issues"
+  },
+  "homepage": "https://github.com/ecg180001/CS4389_Group_Project_Online_Banking#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
