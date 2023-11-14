@@ -35,7 +35,7 @@ header {
 }
 
 h1 {
-  padding-top: 200px;
+  padding-top: 18vw;
   font-size: 4vw;
   color: #fff;
   text-align: center;
@@ -46,6 +46,28 @@ h3 {
   padding: 0;
 }
 
+.buttons {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  gap: 2.5vw;
+  margin-top: -2.5vw;
+}
+
+button {
+  background: #e2337f;
+  border-radius: 16px;
+  padding: 1.2vw 3vw;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 1.5vw "Open Sans", sans-serif;
+  text-align: center;
+  border: white 1vw;
+}
+
+.signup-img img {
+  width: 10vw;
+}
 /* section {
   max-width: 1200px;
   margin: 20px auto;
