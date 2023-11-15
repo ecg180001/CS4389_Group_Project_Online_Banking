@@ -24,7 +24,8 @@ nav a:hover {
 
 header {
   display: flex;
-  max-width: 1024px;
+  min-width: 1024px;
+  width: 80vw;
   margin: 0 auto;
   color: #fff;
   text-align: center;
@@ -35,8 +36,8 @@ header {
 }
 
 h1 {
-  padding-top: 200px;
-  font-size: 4vw;
+  margin-top: 15vw;
+  font-size: 3vw;
   color: #fff;
   text-align: center;
 }
@@ -46,6 +47,34 @@ h3 {
   padding: 0;
 }
 
+.buttons {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  gap: 2vw;
+  margin-top: -1vw;
+}
+
+button {
+  background: #e2337f;
+  border-radius: 2vw;
+  padding: 1vw 2vw;
+  color: #ffffff;
+  font: normal bold 1.2vw "Open Sans", sans-serif;
+  border: none;
+}
+button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+button:hover {
+  color: #e2337f;
+  background: white;
+}
+
+.signup-img img {
+  width: 10vw;
+}
 /* section {
   max-width: 1200px;
   margin: 20px auto;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="Assets/dash-style.css" />
+    <script src="Assets/app.js"></script>
+  </head>
+
+  <body onload="displayTransactionHistory()">
+    <nav>
+      <div class="icon" onclick="showPage('overview')">&#128200;</div>
+      <div class="icon" onclick="showPage('accounts')">&#128176;</div>
+      <div class="icon" onclick="showPage('transactions')">&#128196;</div>
+      <div class="icon" onclick="showPage('addSend')">&#128184;</div>
+    </nav>
+
+    <main>
+      <div id="overview" class="page">
+        <h2>Welcome to Your Banking Dashboard</h2>
+        <p>View your account information, make transactions, and more.</p>
+      </div>
+
+      <div id="accounts" class="page">
+        <h2>Accounts Overview</h2>
+        <div class="account" onclick="showAccountDetails('checking')">
+          <h3>Checking Account</h3>
+          <p>Balance: $5000</p>
+        </div>
+        <div class="account" onclick="showAccountDetails('savings')">
+          <h3>Savings Account</h3>
+          <p>Balance: $10000</p>
+        </div>
+      </div>
+
+      <div id="accountDetails" class="page">
+        <h2>Account Details</h2>
+        <p id="accountName"></p>
+        <p id="accountBalance"></p>
+        <p id="accountRouting"></p>
+        <p id="accountNumber"></p>
+        <button onclick="showPage('accounts')">Back to Accounts</button>
+      </div>
+
+      <!-- ... (unchanged parts of HTML) ... -->
+
+      <div id="addSend" class="page">
+        <h2>Add/Send Money</h2>
+        <button onclick="showForm('deposit')">Make Deposit</button>
+        <button onclick="showForm('withdraw')">Make Withdrawal</button>
+
+        <div id="transactionForm" style="display: none">
+          <h3 id="transactionTypeLabel"></h3>
+          <form id="moneyForm">
+            <label for="accountSelect">Select Account:</label>
+            <select id="accountSelect" required>
+              <option value="checking">Checking Account</option>
+              <option value="savings">Savings Account</option>
+            </select>
+            <label for="amountInput">Enter Amount:</label>
+            <input type="number" id="amountInput" min="0" required />
+            <button type="button" onclick="submitTransaction()">Submit</button>
+            <button type="button" onclick="cancelTransaction()">Cancel</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ... (unchanged parts of HTML) ... -->
+
+      <div id="transactions" class="page">
+        <h2>Transaction History</h2>
+        <ul id="transactionList">
+          <!-- Sample transactions will be added here dynamically using JavaScript -->
+        </ul>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
