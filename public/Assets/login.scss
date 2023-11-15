@@ -20,28 +20,17 @@ html {
 }
 
 body {
-  height: 100%;
   font-size: 65.2%;
-  background: #e9ebee;
+  background: url("main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #1d2129;
   display: flex;
-  perspective: 1600px;
-  background-image: url("main-background.jpg");
-  background-size: cover;
-}
-
-.version {
-  position: absolute;
-  bottom: 1em;
-  right: 2em;
-  border-radius: 4em;
-  background: #ff4b2b;
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 0.8em 2em;
-  letter-spacing: 0.1em;
-  transition: transform 80ms ease-in;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -191,11 +180,6 @@ button:active {
   transform: scale(0.95);
 }
 
-button:focus {
-  outline: 1px solid var(--main-bg-color);
-  /* outline: none; */
-}
-
 a {
   transition: all 0.3s ease;
   cursor: pointer;
@@ -214,12 +198,9 @@ a:hover svg {
 }
 
 #container {
-  width: 100%;
-  max-width: 80em;
-  min-width: 70.5em;
+  width: 45vw;
   height: 50em;
-  position: relative;
-  border-radius: 2em;
+  border-radius: 2vw;
   transform-style: preserve-3d;
   margin: auto;
   & > div {
@@ -298,14 +279,12 @@ a:hover svg {
 }
 
 .front {
-  background: linear-gradient(-45deg, var(--main-bg-color) 0%, #1d2129 100%)
-    no-repeat 0 0/100%;
+  background: linear-gradient(-45deg, var(--main-bg-color) 0%, #1d2129 100%) no-repeat 0 0/100%;
   z-index: 3;
 }
 
 .back {
-  background: linear-gradient(135deg, var(--main-bg-color) 0%, #1d2129 100%)
-    no-repeat 0 0/200%;
+  background: linear-gradient(135deg, var(--main-bg-color) 0%, #1d2129 100%) no-repeat 0 0/200%;
   z-index: 2;
   .content {
     transform: rotateY(180deg);

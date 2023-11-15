@@ -93,16 +93,12 @@ body {
   height: 48px;
 }
 
-.login input.btn {
+button {
   max-width: 400px;
-  width: 100%;
-  margin-top: 16px;
-  display: inline-block;
+  width: 10vw;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
-  cursor: pointer;
-
   background-color: #e2337f;
   border: none;
   font-size: 1rem;
@@ -111,8 +107,8 @@ body {
   border-radius: 2vw;
 }
 
-.login input.btn:hover {
-  color: #fcfbfb;
+button:hover {
+  color: #858080;
   background: #4ee4ff;
 }
 
