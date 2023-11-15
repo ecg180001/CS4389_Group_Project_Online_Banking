@@ -1,5 +1,5 @@
 {
-  "name": "cs4389_group_project_online_banking",
+  "name": "bankify",
   "version": "1.0.0",
   "description": "Online banking simulator",
   "main": "index.js",
@@ -18,5 +18,6 @@
   "homepage": "https://github.com/ecg180001/CS4389_Group_Project_Online_Banking#readme",
   "dependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "devDependencies": {}
 }
