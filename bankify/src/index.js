@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import logo from './logo.svg';
+import './App.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>
-);
+function App() {
+  return (
+    <div class="index-body">
+    <section class="main-section">
+      <header class="nav-bar" className="main-header">
+        <h3 class="logo">Bankify</h3>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+        </nav>
+      </header>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+      <div class="hero-section">
+        <h1>Your Trusted Banking Partner</h1>
+        <img src="/" alt="" srcset="" />
+      </div>
+
+      <div class="buttons">
+        <a href="Login.html"><button>Login / Sign Up</button></a>
+      </div>
+    </section>
+  </div>
+  );
+}
+
+export default App;
