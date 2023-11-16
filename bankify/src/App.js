@@ -3,22 +3,27 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div class="index-body">
+    <section class="main-section">
+      <header class="nav-bar" className="main-header">
+        <h3 class="logo">Bankify</h3>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+        </nav>
       </header>
-    </div>
+
+      <div class="hero-section">
+        <h1>Your Trusted Banking Partner</h1>
+        <img src="/" alt="" srcset="" />
+      </div>
+
+      <div class="buttons">
+        <a href="Login.html"><button>Login / Sign Up</button></a>
+      </div>
+    </section>
+  </div>
   );
 }
 
