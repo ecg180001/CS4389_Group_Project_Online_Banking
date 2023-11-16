@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         <div className="buttons">
-          <a href="./login/page.tsx">
+          <a href="./login/">
             <button>Login / Sign Up</button>
           </a>
         </div>
