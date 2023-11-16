@@ -1,10 +1,7 @@
 "use client";
 
-// import "./page.css";
 // import { useAuth } from ".../auth/context";
-import "./login.scss";
-import "./login.js";
-
+import "./verification.css";
 export default function Home() {
   //   const { user } = useAuth();
 
@@ -12,7 +9,7 @@ export default function Home() {
     <body>
       <section className="auth-screen">
         <div className="auth-bg-img">
-          <img src="Assets/main-background.jpg" alt="bg-img" />
+          <img src="/main-background.jpg" alt="bg-img" />
         </div>
         <div className="logo-col"></div>
         <div className="login">
@@ -21,12 +18,12 @@ export default function Home() {
             <p>Enter the 6 digit OTP sent to your email.</p>
           </div>
           <form action="" className="otp-form">
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
-            <input className="otp-field" type="text" name="opt-field[]" maxlength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
+            <input className="otp-field" type="text" name="opt-field[]" maxLength="1" />
           </form>
 
           <a href="dashboard_new.html">
