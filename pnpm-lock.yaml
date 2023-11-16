@@ -53,6 +53,9 @@ dependencies:
   react-loading-hook:
     specifier: ^1.0.0
     version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
+  run:
+    specifier: ^1.4.0
+    version: 1.4.0
   sass:
     specifier: ^1.69.5
     version: 1.69.5
@@ -1854,7 +1857,6 @@ packages:
     dependencies:
       balanced-match: 1.0.2
     dev: false
-    optional: true
 
   /braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
@@ -3998,7 +4000,6 @@ packages:
     dependencies:
       brace-expansion: 2.0.1
     dev: false
-    optional: true
 
   /minimist-options@4.1.0:
     resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}
@@ -4886,6 +4887,14 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+
+  /run@1.4.0:
+    resolution: {integrity: sha512-962oBW07IjQ9SizyMHdoteVbDKt/e2nEsnTRZ0WjK/zs+jfQQICqH0qj0D5lqZNuy0JkbzfA6IOqw0Sk7C3DlQ==}
+    engines: {node: '>=v0.9.0'}
+    hasBin: true
+    dependencies:
+      minimatch: 5.1.6
+    dev: false
 
   /safe-array-concat@1.0.1:
     resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==}
