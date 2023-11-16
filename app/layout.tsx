@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ServerAuthProvider } from "../auth/server-auth-provider";
-import '@mantine/core/styles.css';
+// import '@mantine/core/styles.css';
 import type { Metadata } from 'next'
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
@@ -21,9 +21,9 @@ export default async function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="dark">
+        {/* <MantineProvider defaultColorScheme="dark"> */}
           <ServerAuthProvider>{children}</ServerAuthProvider>
-        </MantineProvider>
+        {/* </MantineProvider> */}
       </body>
     </html>
   );

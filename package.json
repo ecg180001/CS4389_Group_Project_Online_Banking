@@ -24,7 +24,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-firebaseui": "^6.0.0",
-    "react-loading-hook": "^1.0.0"
+    "react-loading-hook": "^1.0.0",
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@types/node": "^20",
