@@ -4,12 +4,6 @@ import "./Styles/login.css";
 
 function App() {
   return (
-    import "./App.css";
-import "./Styles/style.css";
-import "./Styles/login.css";
-
-function App() {
-  return (
     <body>
       <div id="container">
         <div class="login">
@@ -146,11 +140,6 @@ function App() {
         </div>
       </div>
     </body>
-  );
-}
-
-export default App;
-
   );
 }
 
