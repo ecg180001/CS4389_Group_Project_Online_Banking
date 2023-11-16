@@ -2,6 +2,7 @@
 
 // import "./page.css";
 // import { useAuth } from ".../auth/context";
+import React, { useState } from "react";
 import "./login.scss";
 
 export default function Home() {
@@ -20,9 +21,13 @@ export default function Home() {
   //   container.className = "close";
   // };
 
+  const [isActive, setActive] = useState(false);
+  const handleToggle = () => {
+    setActive(!isActive);  };
+
   return (
     <body>
-      <div id="container">
+      <div id="container" className={isActive ? "active" : "close"}>
         <div className="login">
           <div className="content">
             <h1>Log In</h1>
@@ -57,7 +62,7 @@ export default function Home() {
             </svg>
             <h1>Hello, friend!</h1>
             <p>Enter your personal details and start journey with us</p>
-            <button id="register" onClick={useS(container)?.classList.replace("close", "active")}>
+            <button id="register" onClick={handleToggle}>
               Register
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
