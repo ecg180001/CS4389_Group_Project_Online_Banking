@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './Pages/Home'
+import './index.css';
+import App from './App';
+import Dashboard from '../../bankify/src/Pages/Dashboard';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <Dashboard />
   </React.StrictMode>
 );
 
