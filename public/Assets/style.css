@@ -16,7 +16,7 @@ nav a:hover {
 }
 
 .main-section {
-  background-image: url("./main-background.jpg");
+  background-image: url("main-background.jpg");
   background-size: cover;
   min-height: 100vh;
   backdrop-filter: blur(10px);
