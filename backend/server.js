@@ -160,6 +160,45 @@ app.post('/addTransaction', async (req, res) => {
   }
 });
 
+// Function to get transactions for a user based on an account ID
+app.post('/getTransactions', async (req, res) => {
+  try {
+    const { userUid, accountId } = req.body;
+
+    // Get user reference
+    const userRef = admin.firestore().collection('users').doc(userUid);
+
+    // Check if the user exists
+    const userDoc = await userRef.get();
+    if (!userDoc.exists) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Check if the account exists
+    const accountDoc = await userRef.collection('accounts').doc(accountId).get();
+    if (!accountDoc.exists) {
+      return res.status(404).json({ error: 'Account not found for the user' });
+    }
+
+    // Get transactions for the specified account
+    const transactions = [];
+    const querySnapshot = await userRef.collection('transactions').where('account_id', '==', accountId).get();
+    
+    querySnapshot.forEach((doc) => {
+      transactions.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+
+    res.status(200).json({ transactions });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
