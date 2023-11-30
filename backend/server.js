@@ -118,7 +118,47 @@ app.post('/signin', async (req, res) => {
   }
 })
 
+// Create a function to add new transactions
+app.post('/addTransaction', async (req, res) => {
+  try {
+    const { userUid, amount, deposit } = req.body;
 
+    // Get user reference
+    const userRef = admin.firestore().collection('users').doc(userUid);
+
+    // Get user's primary account
+    const querySnapshot = await userRef.collection('accounts').where('account_type', '==', 'primary').get();
+    if (querySnapshot.empty) {
+      return res.status(404).json({ error: 'Primary account not found for the user' });
+    }
+
+    const accountDoc = querySnapshot.docs[0];
+    const accountId = accountDoc.id;
+
+    // Add a new transaction
+    const timestamp = admin.firestore.FieldValue.serverTimestamp();
+
+    await userRef.collection('transactions').add({
+      deposit,
+      amount,
+      account_id: accountId,
+      timestamp,
+    });
+
+    // Update the account balance
+    const currentBalance = accountDoc.data().balance;
+    const newBalance = deposit ? currentBalance + amount : currentBalance - amount;
+
+    await accountDoc.ref.update({
+      balance: newBalance,
+    });
+
+    res.status(200).json({ success: true, message: 'Transaction added successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
