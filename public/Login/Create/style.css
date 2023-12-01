@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+}
+
+.pagewrap {
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10vh 0;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  position: relative;
+}
+
+header:after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  z-index: 1;
+  transform: skewY(2deg);
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.header-content {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transfrom: translate(-50%, -50%);
+}
+
+header h1:before {
+  content: "\f053";
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  position: absolute;
+  left: -200px;
+  top: 10px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+header h1:after {
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  position: absolute;
+  left: 290px;
+  top: 10px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.taxi {
+  font-weight: 600;
+}
+
+section {
+  position: relative;
+  height: 500px;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #222;
+  height: 100%;
+  opacity: 0.8;
+  padding: 60px 0;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+input,
+select {
+  display: block;
+  width: 70%;
+  height: 60px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.username-input:after {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 35%;
+  right: 18%;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.id-input:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 1.5em;
+  top: 68%;
+  left: 78%;
+  cursor: pointer;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select-input:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 51%;
+  right: 110px;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+button {
+  background: linear-gradient(to right, #fa1, #fc1);
+  width: 30%;
+  height: 65px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 3px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  top: -30px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
