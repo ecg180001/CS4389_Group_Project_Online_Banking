@@ -102,7 +102,7 @@ function cancelTransaction() {
 var sampleTransactions = [
   { type: "Deposit", account: "Checking Account", amount: 1000 },
   { type: "Withdrawal", account: "Savings Account", amount: 500 },
-  { type: "Deposit", account: "Checking Account", amount: 2000 },
+  { type: "Deposit", account: "Checking Account", amount: 2000 }
 ];
 
 // Function to display transaction history
@@ -113,9 +113,7 @@ function displayTransactionHistory() {
   for (var i = 0; i < sampleTransactions.length; i++) {
     var transaction = sampleTransactions[i];
     var listItem = document.createElement("li");
-    listItem.innerHTML = `${transaction.type} - ${
-      transaction.account
-    }: $${transaction.amount.toFixed(2)}`;
+    listItem.innerHTML = `${transaction.type} - ${transaction.account}: $${transaction.amount.toFixed(2)}`;
     transactionList.appendChild(listItem);
   }
 }
@@ -152,9 +150,8 @@ function submitTransaction() {
   // Add the new transaction to the sample transactions
   var transaction = {
     type: transactionTypeLabel.innerText,
-    account:
-      accountType === "checking" ? "Checking Account" : "Savings Account",
-    amount: amount,
+    account: accountType === "checking" ? "Checking Account" : "Savings Account",
+    amount: amount
   };
   sampleTransactions.push(transaction);
 
