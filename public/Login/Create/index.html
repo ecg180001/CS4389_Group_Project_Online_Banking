@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    
     <title>Document</title>
   </head>
-  <body>
+  <body onload = "createUserPage()">
     <div class="bg">
       <div class="card">
         <div class="title">New User Sign-Up</div>
         <form class="form">
           <div class="h2">User Information</div>
-          <input type="text" name="name" placeholder="First Name" class="float-label" required />
-          <input type="text" name="name" placeholder="Last Name" class="float-label" required />
-          <input type="text" name="position title" placeholder="Position Title" class="float-label" required />
-          <input type="number" name="initial deposite" placeholder="Initial Deposit" class="flobal-label" required min="1" step="any" />
+          <input id="firstName" type="text" name="name" placeholder="First Name" class="float-label" required />
+          <input id="lastName" type="text" name="name" placeholder="Last Name" class="float-label" required />
+          <input id="address" type="text" name="position title" placeholder="Address" class="float-label" required />
+          <input id="deposit" type="number" name="initial deposit3" placeholder="Initial Deposit" class="float-label" required min="0" step="100" />
           <div class="permissions">
             <div class="h2">User Permissions</div>
             <div class="col-1">
@@ -35,8 +36,10 @@
             </div>
           </div>
         </form>
-        <div class="button">Send Invite</div>
+        <button class="button" id = "signUP">Sign Up</button>
       </div>
     </div>
+    <script type = "text/javascript" src = "../login.js" ></script>
+    
   </body>
 </html>

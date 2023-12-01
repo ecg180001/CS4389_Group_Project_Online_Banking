@@ -1,3 +1,4 @@
+alert("On Pageeeefasdadsasd")
 let switchCtn = document.querySelector("#switch-cnt");
 let switchC1 = document.querySelector("#switch-c1");
 let switchC2 = document.querySelector("#switch-c2");

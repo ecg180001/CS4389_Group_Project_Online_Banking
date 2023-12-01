@@ -47,20 +47,24 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   margin: 0;
-  background: #f1a76a;
+  background: url(../../Assets/Images/main-background.jpg) no-repeat;
+  background-size: cover;
+
 }
 .bg {
   position: absolute;
   width: 100%;
   min-height: 100%;
   height: auto;
-  background-image: -webkit-linear-gradient(-45deg, #ed7f74, #f1a76a);
-  background-image: linear-gradient(-45deg, #ed7f74, #f1a76a);
-  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 .card {
   position: absolute;
@@ -76,6 +80,7 @@ body {
 }
 .title {
   color: #333;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
   text-indent: 2rem;
   font-size: 2em;
@@ -121,10 +126,11 @@ input[type="text"] {
   margin-bottom: 1.25em;
 }
 input:hover {
-  border-bottom: 1px solid #ff3b1b;
+  border-bottom: 1px solid rgba(245, 21, 127, 0.4);;
 }
 input:focus {
   outline: 0;
+  border-bottom: 1px solid rgba(245, 21, 127, 0.8);;
 }
 .permission-group {
   margin-top: 0.5em;
@@ -167,10 +173,10 @@ input[type="checkbox"] {
   text-indent: 1%;
 }
 input:checked + .icon-PieChart {
-  color: #eea975;
+  color: #4b70e2;
 }
 input:checked + .icon-ManageUsers {
-  background-color: #e6cb5c;
+  background-color: #4b70e2;
   color: #3a3009;
 }
 input:checked + .icon-uniE900 {
@@ -197,7 +203,8 @@ input:checked + .icon-SurveysAdmin {
 }
 .button {
   color: #fff;
-  background: #ff4729;
+  border-radius: 25px;
+  background: #4b70e2;
   margin: 2em;
   height: 3em;
   line-height: 3em;
@@ -216,10 +223,15 @@ input:checked + .icon-SurveysAdmin {
   background: shade(#ff4729, 10%);
 }
 .label-floatlabel {
-  color: rgba(255, 71, 41, 0.8);
+  color: rgba(245, 21, 127, 0.8);
   font-weight: 700;
   font-size: 0.75em;
   line-height: 1em;
   text-transform: uppercase;
   padding-bottom: 0.5em;
+}
+
+button {
+  border:none;
+  width: 90%;
 }
