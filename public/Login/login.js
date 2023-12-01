@@ -1,6 +1,3 @@
-onload = () => {
-  alert("Login Page");
-};
 // Initializing Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
@@ -74,9 +71,11 @@ function createUser() {
 }
 
 let createButton = document.getElementById("create_user");
-function createUser() {
-  alert("Create User");
-  window.location.href = "/Create";
-}
+// function createUser() {
+//   alert("Create User");
+//   window.location.href = "/Create";
+// }
 
 createButton.addEventListener("click", createUser);
+
+alert("Hello World");
