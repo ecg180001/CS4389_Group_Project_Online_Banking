@@ -7,39 +7,35 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="pagewrap" style="background: url('../../Assets/Images/main-background.jpg'); background-size: cover">
-      <div class="pagewrap-overlay"></div>
-      <div class="content">
-        <header>
-          <div class="header-content">
-            <h1><span class="taxi">Taxi</span>Drive</h1>
+    <div class="bg">
+      <div class="card">
+        <div class="title">New User Sign-Up</div>
+        <form class="form">
+          <div class="h2">User Information</div>
+          <input type="text" name="name" placeholder="First Name" class="float-label" required />
+          <input type="text" name="name" placeholder="Last Name" class="float-label" required />
+          <input type="text" name="position title" placeholder="Position Title" class="float-label" required />
+          <input type="number" name="initial deposite" placeholder="Initial Deposit" class="flobal-label" required min="1" step="any" />
+          <div class="permissions">
+            <div class="h2">User Permissions</div>
+            <div class="col-1">
+              <div class="permission-group">
+                <input type="checkbox" name="" value="" checked />
+                <span class="icon-PieChart"></span>
+                <span class="permission-detail">
+                  Accept User Agreement
+                  <span class="help">(Given to all users)</span>
+                </span>
+              </div>
+              <div class="permission-group">
+                <input type="checkbox" name="" value="" />
+                <span class="icon icon-ManageUsers"></span>
+                <span class="permission-detail"> Sign-Up for paperless billing </span>
+              </div>
+            </div>
           </div>
-          <div class="slanted"></div>
-        </header>
-
-        <section style="background-image: url(https://res.cloudinary.com/dnroxbmjk/image/upload/v1478559583/taxi_viuv55.jpg); background-size: cover">
-          <form>
-            <div class="name-input">
-              <input type="text" class="name" placeholder="First Name" />
-            </div>
-            <div class="username-input">
-              <input type="text" class="username" placeholder="Last Name" />
-            </div>
-
-            <div class="username-input">
-              <input type="text" class="username" placeholder="Username" />
-            </div>
-            <div class="select-input">
-              <select disabled>
-                <option>Car Type</option>
-              </select>
-            </div>
-            <div class="id-input">
-              <input type="text" class="id" placeholder="ID" />
-            </div>
-          </form>
-        </section>
-        <button>Next</button>
+        </form>
+        <div class="button">Send Invite</div>
       </div>
     </div>
   </body>
