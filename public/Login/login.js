@@ -1,5 +1,6 @@
 onload = () => {
   alert("Login Page");
+  console.log("Page Loaded");
 };
 // Initializing Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
