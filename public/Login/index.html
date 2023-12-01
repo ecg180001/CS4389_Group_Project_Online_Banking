@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="./login.css" />
   </head>
 
   <body>
@@ -14,10 +14,10 @@
       <div class="container a-container" id="a-container">
         <form class="form" id="a-form" method="" action="">
           <h2 class="form_title title">Create Account</h2>
-          <input class="form__input" type="email" placeholder="Email" />
-          <input class="form__input" type="password" placeholder="Password" />
-          <input class="form__input" type="password" placeholder="Confirm Password" />
-           <a href="./Create/"></a><button class="switch__button button switch-btn" onsubmit=" window.location.href='/Create'">SIGN UP</button></a>
+          <input class="form__input" type="email" placeholder="Email" id="email" />
+          <input class="form__input" type="password" placeholder="Password" id="password" />
+          <input class="form__input" type="password" placeholder="Confirm Password" id="confirm_password" />
+          <button class="switch__button button switch-btn" id="create_user">SIGN UP</button>
         </form>
       </div>
       <div class="container b-container" id="b-container">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <script src="login-form-animation.js"></script>
-    <script src="login.js"></script>
   </body>
+  <script src="login-form-animation.js"></script>
+  <script type="module" src="./login.js"></script>
 </html>
