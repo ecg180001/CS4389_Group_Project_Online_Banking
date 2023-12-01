@@ -1,3 +1,15 @@
+// Retrieve User Information
+
+let createUserButton = document.getElementById("create_user");
+createButton.addEventListener("click", createUser);
+let createUser = (e) => {
+  e.preventDefault();
+  alert("Create User");
+}
+
+
+
+
 // Initializing Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
@@ -49,15 +61,15 @@ function login() {
     });
 }
 
-function createUser() {
-  let user = {
-    user_email: "test.user@example.com",
-    user_password: "password",
-    first_name: "John2",
-    last_name: "Doe2",
-    address: "123 Main St",
-    initial_deposit: 1000
-  };
+// function createUser() {
+//   let user = {
+//     user_email: "test.user@example.com",
+//     user_password: "password",
+//     first_name: "John2",
+//     last_name: "Doe2",
+//     address: "123 Main St",
+//     initial_deposit: 1000
+//   };
 
   // Submit user to back-end
   axios
