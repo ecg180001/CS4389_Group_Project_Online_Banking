@@ -1,4 +1,3 @@
-alert("On Pageeeefasdadsasd")
 let switchCtn = document.querySelector("#switch-cnt");
 let switchC1 = document.querySelector("#switch-c1");
 let switchC2 = document.querySelector("#switch-c2");
@@ -28,8 +27,8 @@ let changeForm = (e) => {
 };
 
 let mainF = (e) => {
-  for (var i = 0; i < allButtons.length; i++) allButtons[i].addEventListener("click", getButtons);
-  for (var i = 0; i < switchBtn.length; i++) switchBtn[i].addEventListener("click", changeForm);
+  for (const element of allButtons) element.addEventListener("click", getButtons);
+  for (const element of switchBtn) element.addEventListener("click", changeForm);
 };
 
 window.addEventListener("load", mainF);

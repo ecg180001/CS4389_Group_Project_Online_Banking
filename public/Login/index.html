@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
-    <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./login.css" />
 
-    <script type = "text/javascript"src="./login-form-animation.js"></script>
-    <!-- <script type = "text/javascript" src="./login.js"></script> -->
+    <script type="text/javascript" src="./login.js"></script>
   </head>
 
-  <body onload = "loginPage()">
+  <body onload="loginPage()">
     <div class="main">
       <div class="container a-container" id="a-container">
         <form class="form" id="a-form" method="" action="">
@@ -19,7 +17,7 @@
           <input class="form__input" type="email" placeholder="Email" id="email" />
           <input class="form__input" type="password" placeholder="Password" id="password" />
           <input class="form__input" type="password" placeholder="Confirm Password" id="confirm_password" />
-          <button class="switch__button button switch-btn" id="create_user">SIGN UP</button>
+          <button type="button" class="switch__button button switch-btn" id="create_user">SIGN UP</button>
         </form>
       </div>
       <div class="container b-container" id="b-container">
@@ -29,7 +27,7 @@
           <input id="email-input" class="form__input" type="text" placeholder="Email" />
           <input id="password-input" class="form__input" type="password" placeholder="Password" />
           <a class="form__link">Forgot your password?</a>
-          <button id="sign-in" class="switch__button button submit">SIGN IN</button>
+          <button type="button" id="sign-in" class="switch__button button submit">SIGN IN</button>
         </form>
       </div>
       <div class="switch" id="switch-cnt">
@@ -47,6 +45,6 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="./login-form-animation.js"></script>
   </body>
-
 </html>

@@ -49,13 +49,11 @@ body {
   margin: 0;
   background: url(../../Assets/Images/main-background.jpg) no-repeat;
   background-size: cover;
-
 }
 .bg {
   position: absolute;
   width: 100%;
   min-height: 100%;
-  height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,8 +62,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
 }
+
 .card {
   position: absolute;
   margin: 0 auto;
@@ -122,15 +120,12 @@ input[type="text"] {
 :-ms-input-placeholder {
   font-style: italic;
 }
-input[type="text"] {
-  margin-bottom: 1.25em;
-}
 input:hover {
-  border-bottom: 1px solid rgba(245, 21, 127, 0.4);;
+  border-bottom: 1px solid rgba(245, 21, 127, 0.4);
 }
 input:focus {
   outline: 0;
-  border-bottom: 1px solid rgba(245, 21, 127, 0.8);;
+  border-bottom: 1px solid rgba(245, 21, 127, 0.8);
 }
 .permission-group {
   margin-top: 0.5em;
@@ -203,7 +198,6 @@ input:checked + .icon-SurveysAdmin {
 }
 .button {
   color: #fff;
-  border-radius: 25px;
   background: #4b70e2;
   margin: 2em;
   height: 3em;
@@ -232,6 +226,6 @@ input:checked + .icon-SurveysAdmin {
 }
 
 button {
-  border:none;
+  border: none;
   width: 90%;
 }

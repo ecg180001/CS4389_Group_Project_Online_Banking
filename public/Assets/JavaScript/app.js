@@ -1,21 +1,21 @@
 function showPage(pageId) {
   // Hide all pages
-  var pages = document.querySelectorAll(".page");
+  const pages = document.querySelectorAll(".page");
   pages.forEach(function (page) {
     page.style.display = "none";
   });
 
   // Show the selected page
-  var selectedPage = document.getElementById(pageId);
+  const selectedPage = document.getElementById(pageId);
   selectedPage.style.display = "block";
 }
 
 function showAccountDetails(accountType) {
-  var accountDetailsPage = document.getElementById("accountDetails");
-  var accountName = document.getElementById("accountName");
-  var accountBalance = document.getElementById("accountBalance");
-  var accountRouting = document.getElementById("accountRouting");
-  var accountNumber = document.getElementById("accountNumber");
+  const accountDetailsPage = document.getElementById("accountDetails");
+  const accountName = document.getElementById("accountName");
+  const accountBalance = document.getElementById("accountBalance");
+  const accountRouting = document.getElementById("accountRouting");
+  const accountNumber = document.getElementById("accountNumber");
 
   // Update account details based on the selected account
   if (accountType === "checking") {
@@ -49,9 +49,9 @@ function sendMoney() {
 }
 
 function showForm(transactionType) {
-  var transactionForm = document.getElementById("transactionForm");
-  var transactionTypeLabel = document.getElementById("transactionTypeLabel");
-  var moneyForm = document.getElementById("moneyForm");
+  const transactionForm = document.getElementById("transactionForm");
+  const transactionTypeLabel = document.getElementById("transactionTypeLabel");
+  const moneyForm = document.getElementById("moneyForm");
 
   if (transactionType === "deposit") {
     transactionTypeLabel.innerText = "Make Deposit";
@@ -66,12 +66,12 @@ function showForm(transactionType) {
 }
 
 function submitTransaction() {
-  var transactionTypeLabel = document.getElementById("transactionTypeLabel");
-  var accountSelect = document.getElementById("accountSelect");
-  var amountInput = document.getElementById("amountInput");
+  const transactionTypeLabel = document.getElementById("transactionTypeLabel");
+  const accountSelect = document.getElementById("accountSelect");
+  const amountInput = document.getElementById("amountInput");
 
-  var accountType = accountSelect.value;
-  var amount = parseFloat(amountInput.value);
+  const accountType = accountSelect.value;
+  const amount = parseFloat(amountInput.value);
 
   if (isNaN(amount) || amount <= 0) {
     alert("Please enter a valid positive amount.");
@@ -79,7 +79,7 @@ function submitTransaction() {
   }
 
   if (transactionTypeLabel.innerText === "Make Withdrawal") {
-    var accountBalance = accountType === "checking" ? 5000 : 10000; // Placeholder balances
+    const accountBalance = accountType === "checking" ? 5000 : 10000; // Placeholder balances
     if (amount > accountBalance) {
       alert("Withdrawal amount cannot exceed the account balance.");
       return;
@@ -94,12 +94,12 @@ function submitTransaction() {
 }
 
 function cancelTransaction() {
-  var transactionForm = document.getElementById("transactionForm");
+  const transactionForm = document.getElementById("transactionForm");
   transactionForm.style.display = "none";
 }
 
 // Sample transactions for initial transaction history
-var sampleTransactions = [
+const sampleTransactions = [
   { type: "Deposit", account: "Checking Account", amount: 1000 },
   { type: "Withdrawal", account: "Savings Account", amount: 500 },
   { type: "Deposit", account: "Checking Account", amount: 2000 }
@@ -107,12 +107,12 @@ var sampleTransactions = [
 
 // Function to display transaction history
 function displayTransactionHistory() {
-  var transactionList = document.getElementById("transactionList");
+  const transactionList = document.getElementById("transactionList");
   transactionList.innerHTML = ""; // Clear existing list
 
-  for (var i = 0; i < sampleTransactions.length; i++) {
-    var transaction = sampleTransactions[i];
-    var listItem = document.createElement("li");
+  for (const i = 0; i < sampleTransactions.length; i++) {
+    const transaction = sampleTransactions[i];
+    const listItem = document.createElement("li");
     listItem.innerHTML = `${transaction.type} - ${transaction.account}: $${transaction.amount.toFixed(2)}`;
     transactionList.appendChild(listItem);
   }
@@ -124,12 +124,12 @@ displayTransactionHistory();
 // ... (unchanged parts of JavaScript) ...
 
 function submitTransaction() {
-  var transactionTypeLabel = document.getElementById("transactionTypeLabel");
-  var accountSelect = document.getElementById("accountSelect");
-  var amountInput = document.getElementById("amountInput");
+  const transactionTypeLabel = document.getElementById("transactionTypeLabel");
+  const accountSelect = document.getElementById("accountSelect");
+  const amountInput = document.getElementById("amountInput");
 
-  var accountType = accountSelect.value;
-  var amount = parseFloat(amountInput.value);
+  const accountType = accountSelect.value;
+  const amount = parseFloat(amountInput.value);
 
   if (isNaN(amount) || amount <= 0) {
     alert("Please enter a valid positive amount.");
@@ -137,7 +137,7 @@ function submitTransaction() {
   }
 
   if (transactionTypeLabel.innerText === "Make Withdrawal") {
-    var accountBalance = accountType === "checking" ? 5000 : 10000; // Placeholder balances
+    const accountBalance = accountType === "checking" ? 5000 : 10000; // Placeholder balances
     if (amount > accountBalance) {
       alert("Withdrawal amount cannot exceed the account balance.");
       return;
@@ -148,7 +148,7 @@ function submitTransaction() {
   // For a real application, you would typically send this data to the server for processing.
 
   // Add the new transaction to the sample transactions
-  var transaction = {
+  const transaction = {
     type: transactionTypeLabel.innerText,
     account: accountType === "checking" ? "Checking Account" : "Savings Account",
     amount: amount
