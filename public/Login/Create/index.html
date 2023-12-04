@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Document</title>
+  </head>
+  <body onload = "createUserPage()">
+    <div class="bg">
+      <div class="card">
+        <div class="title">New User Sign-Up</div>
+        <form class="form">
+          <div class="h2">User Information</div>
+          <input id="firstName" type="text" name="name" placeholder="First Name" class="float-label" required />
+          <input id="lastName" type="text" name="name" placeholder="Last Name" class="float-label" required />
+          <input id="address" type="text" name="position title" placeholder="Address" class="float-label" required />
+          <input id="deposit" type="number" name="initial deposit3" placeholder="Initial Deposit" class="float-label" required min="0" step="100" />
+          <div class="permissions">
+            <div class="h2">User Permissions</div>
+            <div class="col-1">
+              <div class="permission-group">
+                <input type="checkbox" name="" value="" checked />
+                <span class="icon-PieChart"></span>
+                <span class="permission-detail">
+                  Accept User Agreement
+                  <span class="help">(Given to all users)</span>
+                </span>
+              </div>
+              <div class="permission-group">
+                <input type="checkbox" name="" value="" />
+                <span class="icon icon-ManageUsers"></span>
+                <span class="permission-detail"> Sign-Up for paperless billing </span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <button class="button" id = "signUP">Sign Up</button>
+      </div>
+    </div>
+    <script type = "text/javascript" src = "../login.js" ></script>
+    
+  </body>
+</html>
