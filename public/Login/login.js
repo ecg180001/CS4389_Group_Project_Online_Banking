@@ -135,6 +135,14 @@ function loginBody() {
         console.log(userCredential);
         const user = userCredential.user;
         console.log(user);
+        axios
+        .post("http://localhost:8080/signin", user.uid)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+         console.log(error);
+  });
         // ...
       })
       .catch((error) => {
