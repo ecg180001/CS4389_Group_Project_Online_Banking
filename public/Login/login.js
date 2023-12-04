@@ -11,6 +11,7 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 const UID = "";
+const ISAUTH = false;
 
 // ------------------------Login Page Code ---------------------------//
 
@@ -179,6 +180,7 @@ loginBody();
 // ------------------------Create User Page Code ---------------------------//
 
 function createUserPage() {
+  
   let signUP = document.getElementById("signUP");
 
   function createUser() {
