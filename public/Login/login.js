@@ -24,11 +24,7 @@ let confirmValue = "";
 
 let bodyLogin = document.getElementById("loginBody");
 
-console.log(bodyLogin);
-
 function loginBody() {
-  alert("In Body");
-
   // Retrieve User Information
   let createUserButton = document.getElementById("create_user");
 
@@ -65,7 +61,6 @@ function loginBody() {
     // console.log(email.value);
     // console.log(password.value);
     // console.log(confirm.value);
-    else window.location.href = "./Create";
 
     // Password Validation code
     function validatePassword(password) {
@@ -132,6 +127,7 @@ function loginBody() {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        window.location = "./MFA";
         // Signed in
         console.log(userCredential);
         const user = userCredential.user;
@@ -139,6 +135,7 @@ function loginBody() {
         // ...
       })
       .catch((error) => {
+        alert("Invalid Credentials. Try again");
         const errorCode = error.code;
         const errorMessage = error.message;
       });
@@ -180,7 +177,6 @@ loginBody();
 // ------------------------Create User Page Code ---------------------------//
 
 function createUserPage() {
-  
   let signUP = document.getElementById("signUP");
 
   function createUser() {
