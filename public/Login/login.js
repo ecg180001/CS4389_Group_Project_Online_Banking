@@ -139,25 +139,6 @@ function loginBody() {
         const errorCode = error.code;
         const errorMessage = error.message;
       });
-    //   firebase
-    //       .auth()
-    //       .signInWithEmailAndPassword(email, password)
-    //       .then((userCredential) => {
-    //       // User is signed in, and you can get the ID token
-    //       const user = userCredential.user;
-    //       return user.getIdToken();
-    //       })
-    //       .then((idToken) => {
-    //       // Log the ID token to the console
-    //       console.log("User ID token:", idToken);
-    //       })
-    //       .catch((error) => {
-    //       // Handle errors
-    //       const errorCode = error.code;
-    //       const errorMessage = error.message;
-    //       console.error(`Error (${errorCode}): ${errorMessage}`);
-    //       });
-    //   }
 
     let createButton = document.getElementById("create_user");
     function createUser() {
@@ -170,7 +151,9 @@ function loginBody() {
     console.log("Hello World");
   }
 }
-loginBody();
+
+bodyLogin.addEventListener("load", loginBody());
+// loginBody();
 
 // #########################################################################//
 
