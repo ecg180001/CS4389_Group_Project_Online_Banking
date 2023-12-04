@@ -2,7 +2,6 @@
 // Initializing Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
-
 // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
 
@@ -10,6 +9,8 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase
 // import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+const UID = "";
 
 // ------------------------Login Page Code ---------------------------//
 
@@ -24,12 +25,12 @@ let bodyLogin = document.getElementById("loginBody");
 
 console.log(bodyLogin);
 
-function loginBody () {
+function loginBody() {
   alert("In Body");
-  
+
   // Retrieve User Information
   let createUserButton = document.getElementById("create_user");
-  
+
   let signInButton = document.getElementById("sign-in");
 
   // Rerieve Username, Password and email elements
@@ -107,71 +108,71 @@ function loginBody () {
   signInButton.addEventListener("click", signInUser);
 
   const firebaseConfig = {
-  apiKey: "AIzaSyCuKAfYwg0EI8Jvhu3AzaS1g0UzQTLCnm8",
-  authDomain: "banking-app-7dc34.firebaseapp.com",
-  projectId: "banking-app-7dc34",
-  storageBucket: "banking-app-7dc34.appspot.com",
-  messagingSenderId: "140471001163",
-  appId: "1:140471001163:web:5a2e8c33ce9c7253756dce",
-  measurementId: "G-WX73PJM3QQ"
+    apiKey: "AIzaSyCuKAfYwg0EI8Jvhu3AzaS1g0UzQTLCnm8",
+    authDomain: "banking-app-7dc34.firebaseapp.com",
+    projectId: "banking-app-7dc34",
+    storageBucket: "banking-app-7dc34.appspot.com",
+    messagingSenderId: "140471001163",
+    appId: "1:140471001163:web:5a2e8c33ce9c7253756dce",
+    measurementId: "G-WX73PJM3QQ"
   };
 
- initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
 
   // Function to log in the user
   function login() {
-  const email = document.getElementById("email-input").value;
-  const password = document.getElementById("password-input").value;
+    const email = document.getElementById("email-input").value;
+    const password = document.getElementById("password-input").value;
 
-  alert(email);
-  alert(password);
+    alert(email);
+    alert(password);
 
-  // Use Firebase Auth to sign in the user
+    // Use Firebase Auth to sign in the user
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        // Signed in 
+      .then((userCredential) => {
+        // Signed in
         console.log(userCredential);
         const user = userCredential.user;
         console.log(user);
         // ...
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-    });
-//   firebase
-//       .auth()
-//       .signInWithEmailAndPassword(email, password)
-//       .then((userCredential) => {
-//       // User is signed in, and you can get the ID token
-//       const user = userCredential.user;
-//       return user.getIdToken();
-//       })
-//       .then((idToken) => {
-//       // Log the ID token to the console
-//       console.log("User ID token:", idToken);
-//       })
-//       .catch((error) => {
-//       // Handle errors
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       console.error(`Error (${errorCode}): ${errorMessage}`);
-//       });
-//   }
+      });
+    //   firebase
+    //       .auth()
+    //       .signInWithEmailAndPassword(email, password)
+    //       .then((userCredential) => {
+    //       // User is signed in, and you can get the ID token
+    //       const user = userCredential.user;
+    //       return user.getIdToken();
+    //       })
+    //       .then((idToken) => {
+    //       // Log the ID token to the console
+    //       console.log("User ID token:", idToken);
+    //       })
+    //       .catch((error) => {
+    //       // Handle errors
+    //       const errorCode = error.code;
+    //       const errorMessage = error.message;
+    //       console.error(`Error (${errorCode}): ${errorMessage}`);
+    //       });
+    //   }
 
-  let createButton = document.getElementById("create_user");
-  function createUser() {
-    alert("Create User");
-    window.location.href = "/Create";
-  }
+    let createButton = document.getElementById("create_user");
+    function createUser() {
+      alert("Create User");
+      window.location.href = "/Create";
+    }
 
-  //comment above for future reference.
-  createButton.addEventListener("click", createUser);
-  console.log("Hello World");
+    //comment above for future reference.
+    createButton.addEventListener("click", createUser);
+    console.log("Hello World");
   }
 }
-  loginBody();
+loginBody();
 
 // #########################################################################//
 
