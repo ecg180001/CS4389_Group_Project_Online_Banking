@@ -1,5 +1,9 @@
 module.exports = function(app, admin)
 {
+    const jwtUtil = require('./utils/jwtUtil')
+
+    const keygen = require('keygen');
+
     // Sign up a user endpoint
     app.post('/signup', async (req, res) =>
     {
@@ -14,8 +18,8 @@ module.exports = function(app, admin)
             const timestamp = Date.now();
             // Create user in Firebase Authentication
             const userRecord = await admin.auth().createUser({
-                user_email,
-                user_password,
+                email: user_email,
+                password: user_password,
             });
         
             // Create user profile in Firestore
