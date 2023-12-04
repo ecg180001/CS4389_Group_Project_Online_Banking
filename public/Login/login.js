@@ -130,25 +130,47 @@ function loginBody() {
     // Use Firebase Auth to sign in the user
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        console.log(userCredential);
-        const user = userCredential.user;
-        console.log(user);
-        axios
-        .post("http://localhost:8080/signin", user.uid)
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-         console.log(error);
-  });
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    .then(async (userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log(user);
+
+      // Your Express.js server endpoint for user login
+      const expressEndpoint = 'http://localhost:8080/signin'; // Replace with your actual server URL
+
+      // Request data to send to the server
+      const requestData = {
+        uid: user.uid,
+      };
+
+      try {
+        const response = await fetch(expressEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(requestData),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log(responseData);
+
+        // Do something with the response data, such as updating the UI or redirecting the user
+
+      } catch (error) {
+        console.error('Error during login:', error);
+      }
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Error during sign-in:', errorCode, errorMessage);
+    });
+      
     //   firebase
     //       .auth()
     //       .signInWithEmailAndPassword(email, password)
