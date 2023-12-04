@@ -312,3 +312,7 @@ main .sidebar {
     font-size: 2cqw;
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
