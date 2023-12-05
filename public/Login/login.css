@@ -14,8 +14,7 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  background: url("../Assets/Images/main-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: url("../Assets/Images/main-background.jpg");
   color: #a0a5a8;
 }
 /**/
