@@ -120,9 +120,6 @@ function loginBody() {
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
 
-    alert(email);
-    alert(password);
-
     // Use Firebase Auth to sign in the user
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
@@ -161,8 +158,12 @@ function loginBody() {
       } catch (error) {
         console.error('Error during login:', error);
       }
+
+      window.location = "./Create";
+
     })
     .catch((error) => {
+      alert("Invalid Credentials");
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('Error during sign-in:', errorCode, errorMessage);
@@ -191,7 +192,7 @@ function loginBody() {
     let createButton = document.getElementById("create_user");
     function createUser() {
       alert("Create User");
-      window.location.href = "/Create";
+      window.location.href = "./Create";
     }
 
     //comment above for future reference.
