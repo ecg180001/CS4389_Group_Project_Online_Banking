@@ -19,8 +19,7 @@ module.exports = function(app, admin)
             // Create user in Firebase Authentication
             const userRecord = await admin.auth().createUser({
                 email: user_email,
-                password: user_password,
-
+                password: user_password
             });
             console.log(userRecord)
         

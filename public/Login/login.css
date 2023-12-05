@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 /* Generic */
 body {
@@ -15,7 +14,8 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  background: url("../Assets/Images/main-background.jpg");
+  background: url("../Assets/Images/main-background.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: #a0a5a8;
 }
 /**/

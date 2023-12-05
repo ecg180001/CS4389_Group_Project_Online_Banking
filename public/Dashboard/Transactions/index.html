@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div>
+          <p style="color: var(--slight-white); font-size: 2vw">Welcome Back,</p>
+          <h1 style="font-size: 3vw">Felipe Maciel!</h1>
+        </div>
+        <div>
+          <h1 style="color: var(--light-blue); font-size: 4cqw; white-space: nowrap">$ 439.000</h1>
+          <p style="color: var(--slight-white)">Monthly Budget</p>
+        </div>
+      </div>
+      <div class="container options">
+        <div class="options-box first-box">
+          <div class="option selected">
+            <i class="fa-solid fa-house"></i>
+            <a href="../"><h2>Dashboard</h2></a>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-money-bill"></i>
+            <h2>Investment</h2>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-list"></i>
+            <a href="./Transactions"><h2>Transaction</h2></a>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-wallet"></i>
+            <h2>Wallet</h2>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-gear"></i>
+            <h2>Settings</h2>
+          </div>
+        </div>
+        <div class="options-box second-box">
+          <div class="option">
+            <i class="fa-solid fa-user"></i>
+            <h2>Account</h2>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <a href="../../Login/"><h2>Log Out</h2></a>
+          </div>
+        </div>
+        <div class="options-box last-box">
+          <div class="option">
+            <i class="fa-solid fa-circle-question"></i>
+            <h2>Help & Information</h2>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <h1>Account Actions</h1>
+
+          
+            <!-- Deposit money -->
+            <div>
+              <h3>Deposit Money</h3>
+              <input type="number" id="deposit-amount" placeholder="Enter amount" />
+              <button onclick="deposit()">Deposit</button>
+            </div>
+          
+            <!-- Add Money -->
+            <div>
+              <h3>Add Money</h3>
+              <input type="number" id="add-amount" placeholder="Enter amount" />
+              <button onclick="addMoney()">Add Money</button>
+            </div>
+          
+            <!-- Send Money -->
+            <div>
+              <h3>Send Money</h3>
+              <input type="text" id="recipient" placeholder="Recipient username" />
+              <input type="number" id="send-amount" placeholder="Enter amount" />
+              <button onclick="sendMoney()">Send Money</button>
+            </div>
+          
+            <!-- Display Transactions -->
+            <div>
+              <h3>Transaction History</h3>
+              <ul id="transaction-history"></ul>
+            </div>
+          </div>
+          
+    </main>
+      
+    </div>
+  </body>
+</html>

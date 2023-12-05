@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Reset Password</title>
   </head>
   <body>
     <nav>
@@ -30,7 +30,7 @@
           </div>
           <div class="option">
             <i class="fa-solid fa-list"></i>
-            <h2>Transaction</h2>
+            <a href="./Transactions/"> <h2>Transaction</h2></a>
           </div>
           <div class="option">
             <i class="fa-solid fa-wallet"></i>
@@ -48,7 +48,7 @@
           </div>
           <div class="option">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <h2>Log Out</h2>
+            <a href="../Login/"><h2>Log Out</h2></a>
           </div>
         </div>
         <div class="options-box last-box">
@@ -73,14 +73,15 @@
           <img src="https://lh3.googleusercontent.com/a/ACg8ocKmGYbZfcIJvT-LBBqyFJTU1CmiJy2Rv9bPczfFYU5MRT4=s288-c-no" alt="Profile" class="pfp" />
         </div>
       </div>
-      <div class="main-grid">
-        <div class="balance">
-          <div class="container">
+
+      <div class="main-grid" id="Dashboard">
+        <div id="balance" class="balance">
+          <div>
             <p style="font-size: 1.5cqw">Available Balance</p>
             <i class="fa-brands fa-css3-alt" style="font-size: 3cqw"></i>
           </div>
           <h1 style="font-size: 4cqw">$ 700.000</h1>
-          <div class="container" style="font-size: 1.5cqw">
+          <div style="font-size: 1.5cqw">
             <div class="info">
               <p style="">Card Number</p>
               <p style="color: var(--slight-white)">234-135-826</p>
@@ -91,6 +92,7 @@
             </div>
           </div>
         </div>
+
         <div class="income">
           <p style="font-size: 1.5cqw">Income</p>
           <div class="container">
@@ -98,6 +100,7 @@
             <i class="fa-solid fa-signal" style="font-size: 2cqw"></i>
           </div>
         </div>
+
         <div class="spending">
           <p style="font-size: 1.5cqw">Spending</p>
           <div class="container">
@@ -105,6 +108,7 @@
             <i class="fa-solid fa-sack-dollar" style="font-size: 2cqw"></i>
           </div>
         </div>
+
         <div class="subscription">
           <div class="container">
             <h3 style="font-size: 2cqw">My subscription</h3>
@@ -143,6 +147,7 @@
             </div>
           </div>
         </div>
+
         <div class="transaction">
           <div class="container">
             <h2 style="font-size: 2cqw">Transaction</h2>
@@ -191,6 +196,7 @@
             </div>
           </div>
         </div>
+
         <div class="send">
           <div class="container">
             <h3 style="font-size: 2cqw">Send to Friend</h3>

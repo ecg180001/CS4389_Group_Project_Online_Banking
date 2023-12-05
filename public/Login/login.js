@@ -11,6 +11,7 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 const UID = "";
+const ISAUTH = false;
 
 // ------------------------Login Page Code ---------------------------//
 
@@ -23,11 +24,7 @@ let confirmValue = "";
 
 let bodyLogin = document.getElementById("loginBody");
 
-console.log(bodyLogin);
-
 function loginBody() {
-  alert("In Body");
-
   // Retrieve User Information
   let createUserButton = document.getElementById("create_user");
 
@@ -64,7 +61,6 @@ function loginBody() {
     // console.log(email.value);
     // console.log(password.value);
     // console.log(confirm.value);
-    else window.location.href = "./Create";
 
     // Password Validation code
     function validatePassword(password) {
@@ -130,6 +126,7 @@ function loginBody() {
     // Use Firebase Auth to sign in the user
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
+
     .then(async (userCredential) => {
       // Signed in
       const user = userCredential.user;
@@ -202,7 +199,9 @@ function loginBody() {
     console.log("Hello World");
   }
 }
-loginBody();
+
+bodyLogin.addEventListener("load", loginBody());
+// loginBody();
 
 // #########################################################################//
 
