@@ -143,7 +143,7 @@ function loginBody() {
     let createButton = document.getElementById("create_user");
     function createUser() {
       alert("Create User");
-      window.location.href = "/Create";
+      window.location = ". /Create";
     }
 
     //comment above for future reference.
@@ -176,6 +176,7 @@ function createUserPage() {
       initial_deposit: initialDeposit
     };
 
+    window.location = "./Create/Confirmation";
     console.log(user);
     //   //Submit user to back-end
     //   axios
