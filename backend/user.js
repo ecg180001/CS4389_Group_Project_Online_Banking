@@ -106,15 +106,23 @@ module.exports = function(app, admin)
         transactionsCollection.forEach((transactionDoc) => {
           transactionsData.push(transactionDoc.data());
         });
+
+        // Retrieve transaction info from the transactions subcollection
+        const historyData = [];
+        const historyCollection = await userRef.collection('history').get();
+        historyCollection.forEach((transactionDoc) => {
+            historyData.push(transactionDoc.data());
+        });
         
-        console.log(transactionsData);
+        console.log(historyData);
 
     
     
         const payload = {
             userData,
             accountsData,
-            transactionsData
+            transactionsData,
+            historyData
         }
         console.log(payload)
         const jwtTokenUserInfo = jwtUtil.generateToken(payload);
