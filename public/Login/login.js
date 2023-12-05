@@ -159,7 +159,7 @@ function loginBody() {
         console.error('Error during login:', error);
       }
 
-      window.location = "./Create";
+      window.location = "./";
 
     })
     .catch((error) => {
