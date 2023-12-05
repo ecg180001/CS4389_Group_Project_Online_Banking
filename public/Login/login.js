@@ -22,7 +22,13 @@ let emailValue = "";
 let passwordValue = "";
 let confirmValue = "";
 
+let tempFirstValue = "";
+let tempLastValue = "";
+let tempBalance = "";
+
 let bodyLogin = document.getElementById("loginBody");
+let createUserBody = document.getElementById("createUserBody");
+let bodyDashboard = document.getElementById("dashboardBody");
 
 function loginBody() {
   // Retrieve User Information
@@ -47,7 +53,7 @@ function loginBody() {
     confirmValue = e.target.value;
   });
 
-  // Function to create new User
+  // - -------------- function to create new User -------------------------
   let createNewUser = (e) => {
     e.preventDefault();
 
@@ -58,9 +64,10 @@ function loginBody() {
     if (!validatePassword(passwordValue)) alert("Password not valid");
     // 2: Ensure passwords match
     else if (passwordValue != confirmValue) alert("Passwords don't match");
-    // console.log(email.value);
-    // console.log(password.value);
-    // console.log(confirm.value);
+
+    else {
+      window.location = "./Create";
+    }
 
     // Password Validation code
     function validatePassword(password) {
@@ -88,8 +95,8 @@ function loginBody() {
       return !!/[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password);
     }
   };
-
-  // Function to Sign-In User
+  
+  //  -------------------- Function to Sign-In User ---------------------------//
   let signInUser = (e) => {
     e.preventDefault();
     //retrive email and password
@@ -99,9 +106,10 @@ function loginBody() {
     console.log(password.value);
     login();
   };
-
+  
   createUserButton.addEventListener("click", createNewUser);
   signInButton.addEventListener("click", signInUser);
+  
 
   const firebaseConfig = {
     apiKey: "AIzaSyCuKAfYwg0EI8Jvhu3AzaS1g0UzQTLCnm8",
@@ -159,7 +167,7 @@ function loginBody() {
         console.error('Error during login:', error);
       }
 
-      window.location = "./";
+      window.location = "./Auth";
 
     })
     .catch((error) => {
@@ -168,40 +176,12 @@ function loginBody() {
       const errorMessage = error.message;
       console.error('Error during sign-in:', errorCode, errorMessage);
     });
-      
-    //   firebase
-    //       .auth()
-    //       .signInWithEmailAndPassword(email, password)
-    //       .then((userCredential) => {
-    //       // User is signed in, and you can get the ID token
-    //       const user = userCredential.user;
-    //       return user.getIdToken();
-    //       })
-    //       .then((idToken) => {
-    //       // Log the ID token to the console
-    //       console.log("User ID token:", idToken);
-    //       })
-    //       .catch((error) => {
-    //       // Handle errors
-    //       const errorCode = error.code;
-    //       const errorMessage = error.message;
-    //       console.error(`Error (${errorCode}): ${errorMessage}`);
-    //       });
-    //   }
-
-    let createButton = document.getElementById("create_user");
-    function createUser() {
-      alert("Create User");
-      window.location.href = "./Create";
-    }
-
-    //comment above for future reference.
-    createButton.addEventListener("click", createUser);
-    console.log("Hello World");
   }
 }
 
 bodyLogin.addEventListener("load", loginBody());
+bodyCreate.addEventListener("load", createUserPage());
+bodyDashboard.addEventListener("load", populateDashboard());
 // loginBody();
 
 // #########################################################################//
@@ -209,13 +189,18 @@ bodyLogin.addEventListener("load", loginBody());
 // ------------------------Create User Page Code ---------------------------//
 
 function createUserPage() {
-  let signUP = document.getElementById("signUP");
+  let signUpButton = document.getElementById("signUP");
+  console.log(signUpButton);
 
   function createUser() {
+    alert("sign up button clicked");
     let firstName = document.getElementById("firstName").value;
+    tempFirstValue = firstName;
     let lastName = document.getElementById("lastName").value;
+    tempLastValue = lastName;
     let address = document.getElementById("address").value;
     let initialDeposit = document.getElementById("deposit").value;
+    tempBalance = initialDeposit;
     let user = {
       user_email: emailValue,
       user_password: passwordValue,
@@ -225,7 +210,9 @@ function createUserPage() {
       initial_deposit: initialDeposit
     };
 
+
     console.log(user);
+    window.location = "../../Dashboard/newAccount.html"
     //   //Submit user to back-end
     //   axios
     //     .post("http://localhost:8080/signup", user)
@@ -237,5 +224,14 @@ function createUserPage() {
     //     });
   }
 
-  signUP.addEventListener("click", createUser);
+  createUser();
+}
+
+function populateDashboard() {
+  let userFullName = document.getElementById("userFullName");
+  alert(userFullName);
+  userFullName.value = tempFirstValue + " " + tempLastValue;
+  let userBalance = document.getElementById("userBalance");
+  alert(userBalance);
+  userBalance.value = tempBalance;
 }

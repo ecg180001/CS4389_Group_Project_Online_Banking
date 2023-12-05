@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet/less" type="text/css" href="../Assets/Styles/dashboard_new.css" />
+    <script type="text/javascript" src="../Login/login.js"></script>
   </head>
-  <body>
+  <body id="dashboardBody">
     <div class="app">
       <header class="app-header">
         <div class="app-header-logo">
@@ -21,8 +22,8 @@
         </div>
         <div class="app-header-navigation">
           <div class="tabs">
-            <a href="#"> Overview </a>
-            <a href="#" class="active"> Payments </a>
+            <a href="#" class="active"> Overview </a>
+            <a href="#"> Payments </a>
             <a href="#"> Cards </a>
             <a href="#"> Account </a>
             <a href="#"> System </a>
@@ -31,7 +32,7 @@
         </div>
         <div class="app-header-actions">
           <button class="user-profile">
-            <span>Matheo Peterson</span>
+            <span id="userFullName">Matheo Peterson</span>
             <span>
               <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
             </span>
@@ -85,8 +86,7 @@
               </div>
               <div class="dropdown-field">
                 <select>
-                  <option>Home</option>
-                  <option>Work</option>
+                  <option>Checking</option>
                 </select>
                 <i class="ph-caret-down"></i>
               </div>
@@ -95,7 +95,7 @@
             <div class="mobile-only">
               <button class="flat-button">Toggle search</button>
             </div>
-            <div class="tiles">
+            <!-- <div class="tiles">
               <article class="tile">
                 <div class="tile-header">
                   <i class="ph-lightning-light"></i>
@@ -141,7 +141,7 @@
                   </span>
                 </a>
               </article>
-            </div>
+            </div> -->
             <div class="service-section-footer">
               <p>Services are paid according to the current state of the currency and tariff.</p>
             </div>
@@ -159,7 +159,7 @@
                 </button>
               </div>
             </div>
-            <div class="transfers">
+            <!-- <div class="transfers">
               <div class="transfer">
                 <div class="transfer-logo">
                   <img src="https://assets.codepen.io/285131/apple.svg" />
@@ -220,12 +220,12 @@
                 </dl>
                 <div class="transfer-number">- $ 70</div>
               </div>
-            </div>
+            </div> -->
           </section>
         </div>
         <div class="app-body-sidebar">
           <section class="payment-section">
-            <h2>New Payment</h2>
+            <h2>New Account</h2>
             <div class="payment-section-header">
               <p>Choose a card to transfer money</p>
               <div>
@@ -258,16 +258,16 @@
                   <span> •••• 4012 </span>
                 </div>
                 <div class="payment-details">
-                  <h3>Internet</h3>
+                  <h3>Checking</h3>
                   <div>
-                    <span>$ 2,110</span>
+                    <span id="userBalance">$ 2,000</span>
                     <button class="icon-button">
                       <i class="ph-caret-right-bold"></i>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="payment">
+              <!-- <div class="payment">
                 <div class="card olive">
                   <span>12/23</span>
                   <span> •••• 2228 </span>
@@ -296,7 +296,7 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="faq">
               <p>Most frequently asked questions</p>
