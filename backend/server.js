@@ -1,6 +1,8 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const jwtUtil = require('./utils/jwtUtil')
+const cors = require('cors');
+
 const serviceAccount = require('./serviceAccount.json');
 const keygen = require('keygen');
 
@@ -10,6 +12,7 @@ admin.initializeApp({credential: admin.credential.cert(serviceAccount)});
 
 const app = express();
 const port = 8080;
+app.use(cors());
 
 app.use(express.json());
 

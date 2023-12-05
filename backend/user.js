@@ -1,5 +1,9 @@
 module.exports = function(app, admin)
 {
+    const jwtUtil = require('./utils/jwtUtil')
+
+    const keygen = require('keygen');
+
     // Sign up a user endpoint
     app.post('/signup', async (req, res) =>
     {
@@ -14,9 +18,10 @@ module.exports = function(app, admin)
             const timestamp = Date.now();
             // Create user in Firebase Authentication
             const userRecord = await admin.auth().createUser({
-                user_email,
-                user_password,
+                email: user_email,
+                password: user_password
             });
+            console.log(userRecord)
         
             // Create user profile in Firestore
             const userRef = admin.firestore().collection('users').doc(userRecord.uid);
@@ -71,7 +76,7 @@ module.exports = function(app, admin)
         // const decodedToken = jwtUtil.verifyToken(token);
         // const user_email = decodedToken.email;
         // const user_password = decodedToken.password;
-        const { user_email, user_password } = req.body;
+        const { uid } = req.body;
     
         // auth user 
         // TO DO: Rithviks AUTH function 
@@ -79,20 +84,44 @@ module.exports = function(app, admin)
         
     
         // get user info from firestore
-        const userDoc = await firestore.collection('Users').doc(userCredential.user.uid).get();
+        console.log(uid)
+        const userRef = await admin.firestore().collection('users').doc(uid);
+        const userDoc = await userRef.get();
         const userData = userDoc.data();
-        // account info from accounts subcollection
-        const accountDoc = await firestore.collection(`Users/${userCredential.user.uid}/accounts`).doc().get();
-        const accountData = accountDoc.data();
-    
-        const transactionDoc = await firestore.collection(`Users/${userCredential.user.uid}/transactions`).doc().get();
-        const transactionData = transactionDoc.data();
+        console.log(userData);
+        
+        // Retrieve account info from the accounts subcollection
+        const accountsData = [];
+        const accountsCollection = await userRef.collection('accounts').get();
+        accountsCollection.forEach((accountDoc) => {
+          accountsData.push(accountDoc.data());
+        });
+        
+        console.log(accountsData);
+        
+        // Retrieve transaction info from the transactions subcollection
+        const transactionsData = [];
+        const transactionsCollection = await userRef.collection('transactions').get();
+        transactionsCollection.forEach((transactionDoc) => {
+          transactionsData.push(transactionDoc.data());
+        });
+
+        // Retrieve transaction info from the transactions subcollection
+        const historyData = [];
+        const historyCollection = await userRef.collection('history').get();
+        historyCollection.forEach((transactionDoc) => {
+            historyData.push(transactionDoc.data());
+        });
+        
+        console.log(historyData);
+
     
     
         const payload = {
             userData,
-            accountData,
-            transactionData
+            accountsData,
+            transactionsData,
+            historyData
         }
         console.log(payload)
         const jwtTokenUserInfo = jwtUtil.generateToken(payload);
